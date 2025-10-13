@@ -22,18 +22,18 @@ const DocsHub = () => {
             <h2>{category}</h2>
             <ul className="docs-list">
               {docs.map((doc) => (
-                <li key={doc.slug}>
-                  <h3>
-                    <Link to={`/docs/${doc.slug}`} className="docs-link">
-                      {doc.title}
-                    </Link>
-                  </h3>
-                  <p>{doc.description}</p>
-                  {doc.readingTime && (
-                    <span className="docs-meta">{doc.readingTime} min read</span>
-                  )}
-                </li>
-              ))}
+              <li key={doc.slug}>
+                <h3>
+                  <Link to={`/docs/${doc.slug}`} className="docs-link">
+                    {doc.title}
+                  </Link>
+                </h3>
+                <p>{doc.description ?? `Explore ${doc.title} in detail.`}</p>
+                {doc.readingTime && (
+                  <span className="docs-meta">{doc.readingTime} min read</span>
+                )}
+              </li>
+            ))}
             </ul>
           </article>
         ))}

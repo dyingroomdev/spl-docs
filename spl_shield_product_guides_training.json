@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "project": "SPL Shield + TDL",
+    "version": "2025-10-13",
+    "description": "Knowledgebase and product guides for training an AI assistant (docs bot / Discord bot).",
+    "license": "CC-BY-4.0"
+  },
+  "api_scan_tiers": {
+    "features": [
+      "Daily Scan Limit",
+      "Risk Indicators",
+      "Holder Analysis",
+      "Liquidity Analysis",
+      "AI Risk Assessment",
+      "MEV Bot Detection",
+      "Rugpull Prediction",
+      "Social Sentiment Tracking",
+      "API Rate Limit",
+      "Priority Support"
+    ],
+    "tiers": {
+      "Free": {
+        "Daily Scan Limit": "5",
+        "Risk Indicators": "Basic",
+        "Holder Analysis": "No",
+        "Liquidity Analysis": "No",
+        "AI Risk Assessment": "No",
+        "MEV Bot Detection": "No",
+        "Rugpull Prediction": "No",
+        "Social Sentiment Tracking": "No",
+        "API Rate Limit": "10 req/min",
+        "Priority Support": "No"
+      },
+      "Premium (10 TDL)": {
+        "Daily Scan Limit": "Unlimited",
+        "Risk Indicators": "10+ Enhanced",
+        "Holder Analysis": "Yes",
+        "Liquidity Analysis": "Basic",
+        "AI Risk Assessment": "No",
+        "MEV Bot Detection": "No",
+        "Rugpull Prediction": "No",
+        "Social Sentiment Tracking": "No",
+        "API Rate Limit": "30 req/min",
+        "Priority Support": "No"
+      },
+      "MVP (50 TDL)": {
+        "Daily Scan Limit": "Unlimited",
+        "Risk Indicators": "20+ Advanced",
+        "Holder Analysis": "Yes (Advanced)",
+        "Liquidity Analysis": "Complete",
+        "AI Risk Assessment": "Yes",
+        "MEV Bot Detection": "Yes",
+        "Rugpull Prediction": "Yes",
+        "Social Sentiment Tracking": "Yes",
+        "API Rate Limit": "100 req/min",
+        "Priority Support": "Yes"
+      }
+    }
+  },
+  "kb": [
+    {
+      "id": "getting_started_1",
+      "category": "Getting Started",
+      "intent": "how_to_use_app",
+      "prompt_variations": [
+        "How do I start using SPL Shield?",
+        "Walk me through the first steps.",
+        "What do I do after connecting my wallet?"
+      ],
+      "answer": "Open the SPL Shield dApp, connect your Solana wallet, paste any SPL token address to scan, then review the Risk Dashboard. Use Advanced Mode for deeper metrics and stake or hold TDL to unlock premium features and alerts.",
+      "tags": [
+        "wallet",
+        "scan",
+        "risk-dashboard",
+        "advanced-mode",
+        "tdl"
+      ]
+    },
+    {
+      "id": "ai_scanner_1",
+      "category": "AI Scanner",
+      "intent": "explain_feature",
+      "prompt_variations": [
+        "What is the AI Scanner?",
+        "How does SPL Shield score tokens?"
+      ],
+      "answer": "The AI Scanner continuously ingests on-chain data and scores each token from 0–100 using a weighted model: Liquidity Health (40%), Contract Vulnerability (40%), Abnormal Trading Patterns (20%). Reports update automatically as new data arrives.",
+      "tags": [
+        "ai",
+        "risk-score",
+        "weights",
+        "on-chain"
+      ]
+    },
+    {
+      "id": "risk_dashboard_1",
+      "category": "Risk Dashboard",
+      "intent": "explain_feature",
+      "prompt_variations": [
+        "What can I see on the risk dashboard?",
+        "Does it show liquidity locks and holder distribution?"
+      ],
+      "answer": "The Risk Dashboard includes a Liquidity Health meter, Developer Wallet tracker, Transaction Heatmap, and a Community Alerts feed. Premium users get 30-day history, cross-token comparison, and exportable reports (PDF/JSON).",
+      "tags": [
+        "dashboard",
+        "liquidity",
+        "holders",
+        "history",
+        "export"
+      ]
+    },
+    {
+      "id": "api_integration_1",
+      "category": "Developer API",
+      "intent": "integration_howto",
+      "prompt_variations": [
+        "How do I integrate the API?",
+        "Do you support WebSocket streams?",
+        "Which endpoints provide risk events?"
+      ],
+      "answer": "Authenticate via wallet-signature (SIWS) plus API key. Core endpoints: GET /v1/scan/{mint}, GET /v1/score/{mint}, GET /v1/risk-events?mint=..., GET /v1/mev-alerts?mint=..., and WS /v1/stream for real-time updates.",
+      "tags": [
+        "api",
+        "rest",
+        "websocket",
+        "endpoints",
+        "auth"
+      ]
+    },
+    {
+      "id": "api_tiers_1",
+      "category": "Developer API",
+      "intent": "pricing_features",
+      "prompt_variations": [
+        "What are the API tiers?",
+        "Compare Free vs Premium vs MVP.",
+        "How many requests per minute are allowed?"
+      ],
+      "answer": "Free: 5 daily scans; 10 req/min; basic indicators. Premium (10 TDL): unlimited scans; 30 req/min; 10+ indicators; holder and basic liquidity analysis. MVP (50 TDL): unlimited scans; 100 req/min; 20+ indicators; advanced holder and complete liquidity analysis; AI risk assessment; MEV detection; rugpull prediction; social sentiment; priority support.",
+      "tags": [
+        "tiers",
+        "limits",
+        "features",
+        "pricing"
+      ],
+      "structured_reference": "api_scan_tiers"
+    },
+    {
+      "id": "staking_1",
+      "category": "Staking & Rewards",
+      "intent": "explain_feature",
+      "prompt_variations": [
+        "How does staking work?",
+        "Do I get a share of platform revenue?"
+      ],
+      "answer": "Stake TDL in the official dApp to earn rewards sourced from scanning fees and API subscriptions. Additional rewards include community bounties for verified scam reports and governance participation bonuses. Minimum lock period may apply (e.g., 30 days).",
+      "tags": [
+        "staking",
+        "rewards",
+        "fees",
+        "subscriptions"
+      ]
+    },
+    {
+      "id": "governance_1",
+      "category": "Governance",
+      "intent": "governance_process",
+      "prompt_variations": [
+        "How do I vote in the DAO?",
+        "What are proposal examples?"
+      ],
+      "answer": "Hold or stake the minimum TDL (e.g., 10,000), access the governance portal, review open proposals, and vote with weight proportional to your staked balance. Typical proposals adjust risk factors, staking APR, or approve partnerships.",
+      "tags": [
+        "dao",
+        "voting",
+        "proposals"
+      ]
+    },
+    {
+      "id": "security_1",
+      "category": "Security & Compliance",
+      "intent": "security_practices",
+      "prompt_variations": [
+        "Are the contracts audited?",
+        "How is the treasury secured?"
+      ],
+      "answer": "All core contracts are audited before launch and monitored continuously via anomaly detection. The treasury is governed by a multi-sig with at least one external, doxxed advisor as a key-holder.",
+      "tags": [
+        "audit",
+        "multisig",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "roadmap_1",
+      "category": "Roadmap",
+      "intent": "timeline_overview",
+      "prompt_variations": [
+        "What are the next milestones?",
+        "When will cross-chain support arrive?"
+      ],
+      "answer": "Phase 1: DApp launch + presale. Phase 2: AI Scanner v1 + staking dashboard. Phase 3: Cross-chain analytics (BSC, Base, ETH). Phase 4: DAO & CEX integration. Phase 5: Enterprise API and revenue-sharing.",
+      "tags": [
+        "roadmap",
+        "milestones",
+        "cross-chain"
+      ]
+    }
+  ]
+}

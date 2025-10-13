@@ -1,0 +1,93 @@
+---
+slug: overview
+category: Overview
+title: SPL Shield Overview
+description: High-level snapshot of the SPL Shield security stack, the TDL token economy, and who benefits from the platform.
+order: 0
+readingTime: 7
+---
+
+import '../../styles/overview-doc.css'
+import { OVERVIEW_CONTENT, OVERVIEW_META } from '../../data/overview.ts'
+
+<article className="overview-doc">
+  <section className="overview-doc__hero">
+    <h1>{OVERVIEW_CONTENT.title}</h1>
+    <h2>{OVERVIEW_CONTENT.subtitle}</h2>
+    <p>{OVERVIEW_CONTENT.mission}</p>
+    <div className="overview-doc__taglist">
+      <span className="overview-doc__tag">Project: {OVERVIEW_META.project}</span>
+      <span className="overview-doc__tag">Rev: {OVERVIEW_META.version}</span>
+    </div>
+  </section>
+
+  <section className="overview-doc__grid">
+    {OVERVIEW_CONTENT.core_components.map((component) => (
+      <div key={component.name} className="overview-doc__card">
+        <h3>{component.name}</h3>
+        <p>{component.description}</p>
+      </div>
+    ))}
+  </section>
+
+  <section className="overview-doc__grid">
+    <div className="overview-doc__card">
+      <h3>AI Engine</h3>
+      <p>{OVERVIEW_CONTENT.ai_engine.description}</p>
+      <ul className="overview-doc__list">
+        {OVERVIEW_CONTENT.ai_engine.capabilities.map((capability) => (
+          <li key={capability}>{capability}</li>
+        ))}
+      </ul>
+    </div>
+    <div className="overview-doc__card">
+      <h3>Why It Matters</h3>
+      <p>{OVERVIEW_CONTENT.why_it_matters}</p>
+      <div className="overview-doc__callout">
+        SPL Shield combines AI-backed insights, transparent tokenomics, and community tooling to reduce the billions lost to exploits each year.
+      </div>
+    </div>
+  </section>
+
+  <section className="overview-doc__section">
+    <h2>Tokenomics Snapshot</h2>
+    <table className="overview-doc__table">
+      <thead>
+        <tr>
+          <th scope="col">Category</th>
+          <th scope="col">Allocation</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(OVERVIEW_CONTENT.tokenomics.distribution).map(([category, allocation]) => (
+          <tr key={category}>
+            <th scope="row">{category}</th>
+            <td>{allocation}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p>Total Supply: {OVERVIEW_CONTENT.tokenomics.total_supply}</p>
+  </section>
+
+  <section className="overview-doc__section">
+    <h2>Target Users</h2>
+    <div className="overview-doc__grid">
+      {OVERVIEW_CONTENT.target_users.map((segment) => (
+        <div key={segment.user} className="overview-doc__card">
+          <h3>{segment.user}</h3>
+          <p>{segment.value}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="overview-doc__section">
+    <h2>Roadmap</h2>
+    <ol className="overview-doc__list">
+      {OVERVIEW_CONTENT.roadmap.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ol>
+  </section>
+</article>

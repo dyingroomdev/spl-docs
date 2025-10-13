@@ -1,0 +1,184 @@
+[
+  {
+    "category": "Overview",
+    "difficulty": "Beginner",
+    "target_user": "General Audience",
+    "question": "What is SPL Shield?",
+    "answer": "SPL Shield is an AI-powered risk scanner built on the Solana blockchain that automatically detects fraudulent tokens, rugpulls, MEV exploits, and suspicious liquidity activities in real time — protecting investors and ensuring transparency across DeFi projects."
+  },
+  {
+    "category": "Overview",
+    "difficulty": "Beginner",
+    "target_user": "Investors",
+    "question": "What problem does SPL Shield solve?",
+    "answer": "The Solana ecosystem faces frequent scams and rugpulls. SPL Shield solves this by providing automated, AI-driven auditing and on-chain intelligence, giving traders and developers trustable security insights instantly."
+  },
+  {
+    "category": "Overview",
+    "difficulty": "Beginner",
+    "target_user": "Developers",
+    "question": "How does SPL Shield stand out from other scanners?",
+    "answer": "Unlike static scanners, SPL Shield uses AI models that continuously learn from blockchain patterns, new scam tactics, and community reports. It also integrates real-time MEV detection and behavioral liquidity analytics, which most competitors lack."
+  },
+  {
+    "category": "Overview",
+    "difficulty": "Beginner",
+    "target_user": "General Audience",
+    "question": "What is TDL (Dollar Token)?",
+    "answer": "TDL is the native utility token that powers SPL Shield’s ecosystem — it enables access to scanning tiers, governance, staking rewards, and premium risk analytics services."
+  },
+  {
+    "category": "Overview",
+    "difficulty": "Beginner",
+    "target_user": "Traders",
+    "question": "Who can use SPL Shield?",
+    "answer": "SPL Shield is designed for traders, investors, and Solana developers who want to secure their tokens, identify risks, and avoid scams. Exchanges and DeFi projects can also integrate it through the SPL Shield API."
+  },
+  {
+    "category": "Technology & AI System",
+    "difficulty": "Intermediate",
+    "target_user": "Developers",
+    "question": "How does SPL Shield detect scams or rugpulls?",
+    "answer": "It uses AI-powered behavioral analysis and pattern recognition to analyze smart contracts, liquidity movements, and token holders. It identifies anomalies like locked liquidity mismatches, fake minting rights, and wash trading."
+  },
+  {
+    "category": "Technology & AI System",
+    "difficulty": "Advanced",
+    "target_user": "Developers",
+    "question": "What is the AI model behind SPL Shield?",
+    "answer": "SPL Shield leverages deep-learning models fine-tuned on Solana network data and a custom AI threat intelligence system that classifies project risk levels as Safe, Medium, or Critical."
+  },
+  {
+    "category": "Technology & AI System",
+    "difficulty": "Beginner",
+    "target_user": "General Audience",
+    "question": "Does SPL Shield work only on Solana?",
+    "answer": "Initially yes, SPL Shield is optimized for Solana’s SPL token ecosystem. However, cross-chain support for Ethereum, Base, and BSC is planned for future phases."
+  },
+  {
+    "category": "Technology & AI System",
+    "difficulty": "Intermediate",
+    "target_user": "Developers",
+    "question": "What data sources does the AI analyze?",
+    "answer": "It analyzes on-chain transactions, liquidity pools, token ownership distribution, developer wallet activity, and social trust signals from X, Discord, and other platforms."
+  },
+  {
+    "category": "Technology & AI System",
+    "difficulty": "Intermediate",
+    "target_user": "Developers",
+    "question": "Can developers integrate SPL Shield into their own dApps?",
+    "answer": "Yes, SPL Shield will provide API and SDK access so developers can embed real-time risk assessment directly into their wallets, exchanges, or DeFi dashboards."
+  },
+  {
+    "category": "Tokenomics & Utility",
+    "difficulty": "Beginner",
+    "target_user": "Investors",
+    "question": "What is the total supply of TDL?",
+    "answer": "The total supply is 1 billion (1,000,000,000) TDL tokens."
+  },
+  {
+    "category": "Tokenomics & Utility",
+    "difficulty": "Intermediate",
+    "target_user": "Investors",
+    "question": "How is the TDL supply distributed?",
+    "answer": "25% Presale, 20% Liquidity & CEX listings, 20% Team & Development (locked/vested), 15% Staking & Rewards, 10% Marketing & Partnerships, 10% Treasury & Ecosystem growth."
+  },
+  {
+    "category": "Tokenomics & Utility",
+    "difficulty": "Intermediate",
+    "target_user": "Investors",
+    "question": "What is the primary utility of TDL?",
+    "answer": "TDL is used for AI scan fees, governance voting, staking, and premium access to SPL Shield features."
+  },
+  {
+    "category": "Tokenomics & Utility",
+    "difficulty": "Intermediate",
+    "target_user": "Investors",
+    "question": "Is TDL deflationary?",
+    "answer": "Yes. A small portion of TDL used for scans and premium features is burned, creating deflationary pressure and increasing token scarcity."
+  },
+  {
+    "category": "Tokenomics & Utility",
+    "difficulty": "Intermediate",
+    "target_user": "Investors",
+    "question": "Will there be staking rewards?",
+    "answer": "Yes. Stakers will earn a share of the revenue generated from AI scanning fees and third-party integrations — encouraging long-term holders."
+  },
+  {
+    "category": "Presale & Launch",
+    "difficulty": "Beginner",
+    "target_user": "Investors",
+    "question": "What is the presale target for TDL?",
+    "answer": "The presale aims to raise $500,000 USD through selling 25% of the total supply (250M TDL)."
+  },
+  {
+    "category": "Presale & Launch",
+    "difficulty": "Beginner",
+    "target_user": "Investors",
+    "question": "Where will the presale happen?",
+    "answer": "The presale will occur on the official SPL Shield DApp and PinkSale (Solana version) to ensure accessibility and transparency."
+  },
+  {
+    "category": "Presale & Launch",
+    "difficulty": "Beginner",
+    "target_user": "Investors",
+    "question": "What is the initial price per TDL token?",
+    "answer": "The presale price is planned around $0.002 per TDL, allowing early participants to join before listings and liquidity addition."
+  },
+  {
+    "category": "Presale & Launch",
+    "difficulty": "Intermediate",
+    "target_user": "Investors",
+    "question": "Will liquidity be locked after launch?",
+    "answer": "Yes, approximately 60–70% of raised funds will be locked as liquidity to ensure stability and investor confidence."
+  },
+  {
+    "category": "Presale & Launch",
+    "difficulty": "Intermediate",
+    "target_user": "Investors",
+    "question": "Will there be vesting or lockups?",
+    "answer": "Yes. Team and development tokens will have a 12-month vesting schedule to ensure long-term commitment and trust."
+  },
+  {
+    "category": "Roadmap, Vision & Community",
+    "difficulty": "Beginner",
+    "target_user": "General Audience",
+    "question": "What’s the roadmap for SPL Shield?",
+    "answer": "Q4 2025: Beta + presale. Q1 2026: AI audit dashboard + staking. Q2 2026: Cross-chain support. Q3 2026: API/SDK integration. Q4 2026: DAO and AI model v2."
+  },
+  {
+    "category": "Roadmap, Vision & Community",
+    "difficulty": "Intermediate",
+    "target_user": "General Audience",
+    "question": "What is the long-term vision of SPL Shield?",
+    "answer": "To become the AI backbone for on-chain security — helping investors, exchanges, and protocols identify risk instantly and make DeFi safer and smarter."
+  },
+  {
+    "category": "Roadmap, Vision & Community",
+    "difficulty": "Beginner",
+    "target_user": "Community",
+    "question": "How can the community get involved?",
+    "answer": "Join the TDL DAO to participate in governance, contribute to AI training, and earn rewards for reporting malicious projects."
+  },
+  {
+    "category": "Roadmap, Vision & Community",
+    "difficulty": "Intermediate",
+    "target_user": "General Audience",
+    "question": "How does SPL Shield ensure transparency?",
+    "answer": "SPL Shield publishes public risk reports and AI confidence scores for every scan, allowing community verification and improved trust."
+  },
+  {
+    "category": "Roadmap, Vision & Community",
+    "difficulty": "Intermediate",
+    "target_user": "Investors",
+    "question": "What partnerships are planned?",
+    "answer": "SPL Shield aims to collaborate with Solana wallets, launchpads, and analytics platforms to integrate its AI scanner and expand its data network."
+  },
+  {
+    "category": "Roadmap, Vision & Community",
+    "difficulty": "Intermediate",
+    "target_user": "Developers",
+    "question": "What are the future monetization plans?",
+    "answer": "In addition to scan fees, SPL Shield will offer enterprise API subscriptions, project verification badges, and custom audit packages for DeFi projects."
+  }
+]

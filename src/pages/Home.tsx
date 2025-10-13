@@ -1,68 +1,69 @@
 import { Link } from 'react-router-dom'
 import '../styles/page.css'
+import { OVERVIEW_CONTENT } from '../data/overview'
 
 const Home = () => {
+  const firstCoreItems = OVERVIEW_CONTENT.core_components.slice(0, 3)
+  const firstTargets = OVERVIEW_CONTENT.target_users.slice(0, 3)
+
   return (
     <section className="page">
       <header className="page__header">
-        <h1>SPL Shield Documentation</h1>
-        <p className="page__lede">
-          Your command center for deploying SPL Shield, trading the TDL token, and operating the
-          risk scanner with confidence.
-        </p>
+        <h1>{OVERVIEW_CONTENT.title}</h1>
+        <div className="page__logo-row" aria-hidden="true">
+          <img src="/logo.png" alt="" className="page__logo" />
+          <img src="/logo_tdl.png" alt="" className="page__logo" />
+        </div>
+        <p className="page__lede">{OVERVIEW_CONTENT.subtitle}</p>
+        <p className="page__lede">{OVERVIEW_CONTENT.mission}</p>
         <div className="page__cta-group">
-          <Link to="/docs" className="button button--primary">
-            Start with Product Guides
+          <Link to="/docs/overview" className="button button--primary">
+            Explore the Overview
           </Link>
-          <Link to="/knowledge-base" className="button button--ghost">
-            Browse Knowledge Base
+          <Link to="/docs/product-guides" className="button button--ghost">
+            Product Playbooks
           </Link>
         </div>
       </header>
 
       <div className="page__grid">
-        <article className="page__card">
-          <h2>Why SPL Shield</h2>
-          <p>
-            Learn how our security middleware protects trades, enforces policy, and surfaces risk so
-            your operations stay compliant.
-          </p>
-          <Link to="/docs/getting-started" className="page__link">
-            Explore the architecture →
-          </Link>
-        </article>
-
-        <article className="page__card">
-          <h2>TDL Token Lifecycle</h2>
-          <p>
-            Understand issuance, buying, selling, and treasury controls for the TDL token with
-            scenario-based walkthroughs.
-          </p>
-          <Link to="/docs/tdl-trading-flows" className="page__link">
-            Review the lifecycle →
-          </Link>
-        </article>
-
-        <article className="page__card">
-          <h2>Risk Scanner Playbooks</h2>
-          <p>
-            Step-by-step guides for configuring the scanner, reviewing findings, and remediating
-            alerts with your security team.
-          </p>
-          <Link to="/docs/risk-scanner-tuning" className="page__link">
-            Configure the scanner →
-          </Link>
-        </article>
+        {firstCoreItems.map((item) => (
+          <article key={item.name} className="page__card">
+            <h2>{item.name}</h2>
+            <p>{item.description}</p>
+          </article>
+        ))}
       </div>
 
       <section className="page__section">
-        <h2>What’s Inside</h2>
+        <h2>Who We Support</h2>
+        <div className="page__grid">
+          {firstTargets.map((target) => (
+            <article key={target.user} className="page__card page__card--compact">
+              <h3>{target.user}</h3>
+              <p>{target.value}</p>
+            </article>
+          ))}
+        </div>
+        <p className="page__note">
+          Dive deeper into target workflows in the{' '}
+          <Link to="/docs/product-guides" className="page__inline-link">
+            Product Guidebook
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section className="page__section">
+        <h2>Roadmap Highlights</h2>
         <ul className="page__list">
-          <li>🚀 Quick starts for onboarding teams in under 30 minutes.</li>
-          <li>🧠 Knowledge base with searchable answers from support.</li>
-          <li>📄 Living whitepaper detailing SPL Shield’s economic and technical model.</li>
-          <li>🔐 Compliance resources and API references for integration partners.</li>
+          {OVERVIEW_CONTENT.roadmap.slice(0, 4).map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
+        <Link to="/docs/overview" className="page__inline-link">
+          View full roadmap →
+        </Link>
       </section>
     </section>
   )

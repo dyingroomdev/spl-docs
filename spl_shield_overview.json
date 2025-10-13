@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "project": "SPL Shield + TDL",
+    "version": "2025-10-13",
+    "section": "Overview",
+    "description": "Overview content for AI training and documentation."
+  },
+  "overview": {
+    "title": "SPL Shield Overview",
+    "subtitle": "The Future of AI-Driven Security on Solana",
+    "mission": "To make Solana the safest blockchain for DeFi and NFTs through AI-driven protection and transparency.",
+    "core_components": [
+      {
+        "name": "AI Risk Scanner",
+        "description": "An intelligent detection engine that assigns a real-time risk score (0–100) for each SPL token, detecting hidden mint authorities, unlocked liquidity, suspicious wallet activity, and MEV anomalies."
+      },
+      {
+        "name": "Analytics Dashboard",
+        "description": "A visual layer offering risk analytics, token distribution, and liquidity health with AI-confidence scoring and developer verification."
+      },
+      {
+        "name": "Community Protection Tools",
+        "description": "Telegram and Discord alert bots, scam reporting bounties, and DAO governance for collective protection."
+      }
+    ],
+    "tokenomics": {
+      "total_supply": "1,000,000,000 TDL",
+      "distribution": {
+        "Presale": "25%",
+        "Liquidity & CEX Listings": "20%",
+        "Team & Development": "20%",
+        "Staking & Rewards": "15%",
+        "Marketing & Partnerships": "10%",
+        "Treasury & Ecosystem Growth": "10%"
+      }
+    },
+    "ai_engine": {
+      "description": "SPL Shield’s neural AI analyzes on-chain liquidity, developer clustering, behavioral anomalies, and social sentiment to detect risk.",
+      "capabilities": [
+        "Adaptive model retraining",
+        "Continuous re-evaluation of token safety",
+        "Behavioral pattern recognition across Solana network"
+      ]
+    },
+    "target_users": [
+      {
+        "user": "Investors",
+        "value": "Instant scam detection and token trust scoring."
+      },
+      {
+        "user": "Developers",
+        "value": "API and SDK integration for AI risk evaluation in wallets or launchpads."
+      },
+      {
+        "user": "Exchanges",
+        "value": "Automated filtering of risky tokens before listing."
+      },
+      {
+        "user": "Communities",
+        "value": "Real-time alerts and scam bounty incentives."
+      }
+    ],
+    "roadmap": [
+      "SPL Shield v1 Launch + TDL Presale",
+      "Staking Dashboard & AI Scanner Integration",
+      "Multi-Chain Support (Ethereum, Base, BSC)",
+      "Governance DAO Activation",
+      "Enterprise API and Revenue Sharing Model"
+    ],
+    "why_it_matters": "SPL Shield delivers transparency, AI-backed analytics, and trust to DeFi, combating billions in annual losses from scams and exploits."
+  }
+}

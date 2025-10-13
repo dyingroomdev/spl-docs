@@ -1,0 +1,88 @@
+---
+slug: product-guides
+category: Product Operations
+title: SPL Shield Product Guidebook
+description: Deep-dive reference covering API tiers, platform modules, and operational playbooks for SPL Shield and the TDL token.
+order: 4
+readingTime: 12
+---
+
+import '../../styles/product-guides.css'
+import { API_TIER_FEATURES, API_TIER_NAMES, GUIDE_CATEGORIES, PRODUCT_GUIDES_META } from '../../data/productGuides.ts'
+
+<article className="product-guides">
+  <section className="product-guides__section">
+    <h1>SPL Shield Product Guidebook</h1>
+    <p className="page__lede">
+      Use this guide to align your team on how SPL Shield operates, what the AI scanner delivers at each tier, and how to communicate core value props to clients and partners.
+    </p>
+    <div className="product-guides__meta">
+      <span className="product-guides__meta-item">Project: {PRODUCT_GUIDES_META.project}</span>
+      <span className="product-guides__meta-item">Rev: {PRODUCT_GUIDES_META.version}</span>
+      <span className="product-guides__meta-item">License: {PRODUCT_GUIDES_META.license}</span>
+    </div>
+    <div className="product-guides__callout">
+      <strong>How to use this guide:</strong> Start with the API tier comparison to brief commercial teams, then drill into the playbooks by category when onboarding analysts, support staff, or integration partners.
+    </div>
+  </section>
+
+  <section className="product-guides__section">
+    <h2>API Scan Tier Comparison</h2>
+    <p>
+      TDL staking unlocks progressively richer analytics, rate limits, and proactive detection. Share this table with prospects evaluating integration or platform access.
+    </p>
+    <table className="product-guides__table">
+      <thead>
+        <tr>
+          <th scope="col">Feature</th>
+          {API_TIER_NAMES.map((tier) => (
+            <th key={tier} scope="col">
+              {tier}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {API_TIER_FEATURES.map((feature) => (
+          <tr key={feature.feature}>
+            <th scope="row">{feature.feature}</th>
+            {API_TIER_NAMES.map((tier) => (
+              <td key={`${feature.feature}-${tier}`}>{feature.tiers[tier]}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section className="product-guides__section">
+    <h2>Operational Playbooks</h2>
+    <p>
+      The entries below align teams on messaging, troubleshooting, and day-to-day execution across SPL Shield modules. Each card groups canonical answers pulled from the training corpus.
+    </p>
+    <div className="product-guides__category-grid">
+      {GUIDE_CATEGORIES.map((category) => (
+        <section key={category.id} className="product-guides__card" aria-labelledby={`${category.id}-title`}>
+          <h3 id={`${category.id}-title`}>{category.title}</h3>
+          <ul className="product-guides__entry-list">
+            {category.entries.map((entry) => (
+              <li key={entry.id} className="product-guides__entry">
+                <div>
+                  <strong>{entry.prompt_variations[0]}</strong>
+                  <p>{entry.answer}</p>
+                </div>
+                <div className="product-guides__entry-tags" aria-label="Tags">
+                  {entry.tags.map((tag) => (
+                    <span key={tag} className="product-guides__entry-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+</article>

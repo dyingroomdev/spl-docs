@@ -44,6 +44,14 @@ const KnowledgeBase = () => {
     [],
   )
 
+  const categoryOrder = useMemo(() => {
+    const order = new Map<string, number>()
+    categories.forEach((category, index) => {
+      order.set(category.id, index)
+    })
+    return order
+  }, [categories])
+
   const tags = useMemo(() => {
     const tagSet = new Set<string>()
     categories.forEach((category) =>
@@ -106,11 +114,13 @@ const KnowledgeBase = () => {
       grouped.set(item.categoryId, existing)
     })
 
-    return Array.from(grouped.values()).map((group) => ({
-      ...group,
-      articles: group.articles.sort((a, b) => a.article.question.localeCompare(b.article.question)),
-    }))
-  }, [activeTag, categories, fuse, hasSearch, normalizedQuery])
+    return Array.from(grouped.values())
+      .map((group) => ({
+        ...group,
+        articles: group.articles.sort((a, b) => a.article.question.localeCompare(b.article.question)),
+      }))
+      .sort((a, b) => (categoryOrder.get(a.id) ?? 0) - (categoryOrder.get(b.id) ?? 0))
+  }, [activeTag, categoryOrder, categories, fuse, hasSearch, normalizedQuery])
 
   const resultCount = groupedResults.reduce((total, category) => total + category.articles.length, 0)
 

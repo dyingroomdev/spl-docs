@@ -11,6 +11,17 @@
   max-width: 720px;
 }
 
+.page__logo-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.page__logo {
+  width: 64px;
+  height: auto;
+}
+
 .page__lede {
   font-size: 1.1rem;
   color: var(--color-text-muted);
@@ -46,6 +57,26 @@
 
 .page__link:hover {
   text-decoration: underline;
+}
+
+.page__inline-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page__inline-link:hover {
+  text-decoration: underline;
+}
+
+.page__card--compact {
+  gap: 0.5rem;
+}
+
+.page__note {
+  margin-top: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 .page__section {
@@ -87,4 +118,10 @@
   background: transparent;
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .page__logo {
+    width: 48px;
+  }
 }
