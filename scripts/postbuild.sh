@@ -1,12 +1,19 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/sh
+set -eu
 
-cd "$(dirname "$0")/.."
+ROOT_DIR=$(cd "$(dirname "$0")/.." && pwd)
+cd "$ROOT_DIR"
 
 if [ "${VITE_SITE_ENV:-production}" = "production" ] && [ -f deploy/static-manifest.json ]; then
-  manifest=deploy/static-manifest.json
-  echo "Refreshing CDN cache with manifest $manifest"
-  while IFS= read -r path; do
-    curl -fsS "https://docs.splshield.com${path}" >/dev/null || true
-  done < <(jq -r '.paths[]' "$manifest")
+  if command -v jq >/dev/null 2>&1 && command -v curl >/dev/null 2>&1; then
+    manifest=deploy/static-manifest.json
+    echo "Refreshing CDN cache with manifest $manifest"
+    jq -r '.paths[]' "$manifest" | while IFS= read -r path; do
+      if [ -n "$path" ]; then
+        curl -fsS "https://docs.splshield.com${path}" >/dev/null || true
+      fi
+    done
+  else
+    echo "Skipping CDN refresh (jq or curl unavailable)."
+  fi
 fi
