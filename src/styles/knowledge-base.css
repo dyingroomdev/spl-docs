@@ -45,6 +45,12 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
+.kb-results-meta {
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
 .kb-card {
   border: 1px solid var(--color-border);
   border-radius: 1rem;
@@ -82,6 +88,12 @@
   padding: 0.25rem 0.6rem;
   background: rgba(59, 130, 246, 0.12);
   color: var(--color-accent);
+}
+
+.kb-highlight {
+  background: rgba(59, 130, 246, 0.2);
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.25rem;
 }
 
 .kb-empty {

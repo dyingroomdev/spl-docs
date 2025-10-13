@@ -2,6 +2,8 @@
 
 React + Vite front-end for the SPL Shield client documentation. It covers product guides, a searchable knowledge base, and an online whitepaper, and ships with Docker assets for VPS deployment.
 
+The knowledge base now ships with fuzzy search (Fuse.js) so operators can locate answers by question, answer text, or tags with typo tolerance.
+
 ## Requirements
 
 - Node.js 20+
@@ -56,7 +58,8 @@ This binds the container’s port 80 to `53121` on the host (`http://localhost:5
 
 - `src/pages` – high-level routes (Overview, Product Guides, Knowledge Base, Whitepaper).
 - `src/components` – shared layout and UI pieces.
-- `src/content` / `src/data` – placeholder content definitions for guides and Q&A.
+- `src/content` – MDX source files plus helpers that index docs by slug and category.
+- `src/data` – structured data for the knowledge base cards and FAQ content.
 - `docker/` – Nginx config used in the production container.
 
 Extend the content files or swap them for a CMS/markdown loader as the documentation scales.

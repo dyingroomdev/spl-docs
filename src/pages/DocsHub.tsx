@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom'
 import '../styles/page.css'
 import '../styles/docs.css'
-import { DOC_SECTIONS } from '../content/docsOverview'
+import { DOCS_BY_CATEGORY } from '../content/docsIndex'
 
 const DocsHub = () => {
+  const categories = Object.entries(DOCS_BY_CATEGORY)
+
   return (
     <section className="page">
       <header className="page__header" id="architecture">
@@ -14,15 +17,21 @@ const DocsHub = () => {
       </header>
 
       <div className="docs-grid">
-        {DOC_SECTIONS.map((section) => (
-          <article key={section.id} className="docs-card" id={section.id}>
-            <h2>{section.title}</h2>
-            <p>{section.description}</p>
+        {categories.map(([category, docs]) => (
+          <article key={category} className="docs-card" id={docs[0]?.slug ?? category}>
+            <h2>{category}</h2>
             <ul className="docs-list">
-              {section.items.map((item) => (
-                <li key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.summary}</p>
+              {docs.map((doc) => (
+                <li key={doc.slug}>
+                  <h3>
+                    <Link to={`/docs/${doc.slug}`} className="docs-link">
+                      {doc.title}
+                    </Link>
+                  </h3>
+                  <p>{doc.description}</p>
+                  {doc.readingTime && (
+                    <span className="docs-meta">{doc.readingTime} min read</span>
+                  )}
                 </li>
               ))}
             </ul>

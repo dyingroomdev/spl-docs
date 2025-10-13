@@ -1,0 +1,53 @@
+---
+slug: risk-scanner-tuning
+category: Risk Scanner Operations
+title: Tuning the Risk Scanner Signal Catalog
+description: Optimize detections, routing, and remediation workflows for your security team.
+order: 3
+readingTime: 7
+---
+
+## Align signals to your threat model
+
+Start with the default catalog, then categorize each signal by:
+
+- **Likelihood** — how often the condition occurs in your environment.
+- **Impact** — financial or compliance exposure if ignored.
+- **Owner** — team responsible for triage.
+
+Deactivate signals that do not apply (e.g., jurisdiction-specific sanctions) and raise severity for high-impact threats like hot wallet drainage or governance token capture.
+
+## Configure routing rules
+
+Create routing rules that map severity and category to destinations:
+
+- Critical safeguards: PagerDuty + SMS for on-call security lead.
+- High: Slack `#splshield-alerts` channel + email summary.
+- Medium/Low: Ticket automatically created in your GRC tool with a 24-hour SLA.
+
+```yaml
+routes:
+  - match:
+      severity: critical
+    destinations: [pagerduty, sms]
+  - match:
+      severity: high
+    destinations: [slack, email]
+  - match:
+      severity: [medium, low]
+    destinations: [jira]
+```
+
+## Review false positives weekly
+
+Run the weekly signal review to keep noise low:
+
+1. Export detections labeled as false positive from the previous seven days.
+2. Identify patterns (same counterparty, same wallet) and add to temporary allow-list if risk-approved.
+3. Document rationale in the audit log so regulators and partners understand your tuning decisions.
+
+> Keep the false-positive rate under 5%. If it rises above 8%, we recommend reverting to the default baseline and adjusting a single parameter at a time.
+
+## Track improvements
+
+Set OKRs around mean time to acknowledge (MTTA) and mean time to remediate (MTTR). Use the built-in analytics dashboards to monitor progress and share quarterly summaries with leadership.

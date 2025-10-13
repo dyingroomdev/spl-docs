@@ -1,0 +1,41 @@
+---
+slug: getting-started
+category: Launch & Access
+title: Getting Started with SPL Shield
+description: Provision your tenant, invite teammates, and configure baseline policies in under an hour.
+order: 1
+readingTime: 8
+---
+
+## Provision your organization
+
+1. Request onboarding from SPL Shield sales or support and provide a verified corporate email domain.
+2. Once your tenant is provisioned, set an administrator passphrase and enable hardware key MFA. Admins are the only role that can manage policies and treasury access by default.
+3. Add an on-call recovery contact. This contact receives break-glass notifications if you trigger the emergency halt or policy bypass modes.
+
+## Invite core operating roles
+
+- **Trading Desk** — executes TDL orders and receives enforcement feedback on risky flows.
+- **Security Analyst** — tunes the risk scanner, triages alerts, and manages integrations such as SIEM and PagerDuty.
+- **Finance Controller** — monitors TDL treasury balances, emission schedules, and settlement reports.
+
+When you invite each teammate, require hardware key verification. Invites expire after 72 hours to minimize stale accounts.
+
+## Mirror sandbox and production policies
+
+Use the environment switcher in the top navigation to hop between sandbox (dev) and production (docs.splshield.com). Keep the following mirrored unless intentionally testing risk scenarios:
+
+- Policy bundles (rate limits, token velocity guards, blocked counterparties).
+- Treasury thresholds and insurance fund locks.
+- Integrations. If a webhook or SIEM destination should not fire in production, label it clearly in the title.
+
+> Tip: Run the policy diff command-line tool weekly to confirm parity between environments. Include the diff in your compliance evidence folder.
+
+## Run the 30-minute readiness checklist
+
+```shell
+npm run policy-audit -- --env production
+npm run policy-audit -- --env sandbox
+```
+
+Verify that no critical findings are present, that your risk scanner feed is healthy (SLA < 5 minutes), and that all emergency contacts have validated devices. Once complete, you are ready to trade with SPL Shield.

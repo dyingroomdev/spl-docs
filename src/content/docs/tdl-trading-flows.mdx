@@ -1,0 +1,50 @@
+---
+slug: tdl-trading-flows
+category: TDL Token Treasury
+title: Executing TDL Trading Flows Safely
+description: Configure venues, approvals, and monitoring so every trade adheres to policy.
+order: 2
+readingTime: 10
+---
+
+## Connect trading venues
+
+Before executing live trades, connect your approved venues (centralized exchange, OTC desk, DEX aggregator):
+
+- Generate API keys with trade-only permissions and store them in the SPL Shield secure vault.
+- Map each venue to a counterparty profile so risk scores and sanctions checks align with your compliance rules.
+- Run a dry-run order in sandbox to validate that the risk scanner receives the simulated fills.
+
+## Configure trade approvals
+
+| Trade Size (TDL) | Required Approvers | SLA |
+| ---------------- | ------------------ | --- |
+| &lt; 10,000        | Trading Desk        | Immediate |
+| 10,000–100,000   | Trading Desk + Finance Controller | 15 minutes |
+| &gt; 100,000       | All roles           | 30 minutes |
+
+Use the approval matrix in SPL Shield to codify the thresholds. When a trade exceeds the configured limits, SPL Shield pauses execution until sign-off is complete.
+
+## Monitor liquidity and slippage
+
+The liquidity dashboard surfaces venue depth, historical slippage, and on-chain settlement health. Set alerts for:
+
+- Spread widening beyond 2.5% compared to VWAP.
+- Settlement delays longer than 15 minutes.
+- Counterparty concentration above 35% of daily volume.
+
+## Automate post-trade reporting
+
+```json
+{
+  "report": "tdl-trade",
+  "frequency": "daily",
+  "destinations": [
+    "s3://splshield-reports/compliance",
+    "https://hooks.slack.com/services/T000/B000/XXXX"
+  ],
+  "metrics": ["venue_volume", "slippage", "counterparty_risk"]
+}
+```
+
+Schedule the post-trade report with the above payload via the reporting API. Analysts receive a summary in Slack and the full dataset lands in your compliance storage bucket.

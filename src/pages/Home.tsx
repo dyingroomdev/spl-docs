@@ -27,7 +27,7 @@ const Home = () => {
             Learn how our security middleware protects trades, enforces policy, and surfaces risk so
             your operations stay compliant.
           </p>
-          <Link to="/docs#architecture" className="page__link">
+          <Link to="/docs/getting-started" className="page__link">
             Explore the architecture →
           </Link>
         </article>
@@ -38,7 +38,7 @@ const Home = () => {
             Understand issuance, buying, selling, and treasury controls for the TDL token with
             scenario-based walkthroughs.
           </p>
-          <Link to="/docs#token-lifecycle" className="page__link">
+          <Link to="/docs/tdl-trading-flows" className="page__link">
             Review the lifecycle →
           </Link>
         </article>
@@ -49,7 +49,7 @@ const Home = () => {
             Step-by-step guides for configuring the scanner, reviewing findings, and remediating
             alerts with your security team.
           </p>
-          <Link to="/docs#risk-scanner" className="page__link">
+          <Link to="/docs/risk-scanner-tuning" className="page__link">
             Configure the scanner →
           </Link>
         </article>
