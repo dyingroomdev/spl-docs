@@ -402,8 +402,7 @@ const Security = () => {
 
       <article className="page__section">
         <p>
-          <strong>End of Guide.</strong> Keep this document updated per release and run the Go/No-Go
-          checklist before opening the presale.
+          <strong>End of guide.</strong> Document will be updated per release!
         </p>
       </article>
     </section>
