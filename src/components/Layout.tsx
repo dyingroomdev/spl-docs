@@ -5,6 +5,11 @@ const NAV_ITEMS = [
   { to: '/', label: 'Overview' },
   { to: '/docs', label: 'Product Guides' },
   { to: '/knowledge-base', label: 'Knowledge Base' },
+  { to: '/splshield', label: 'SPL Shield' },
+  { to: '/terms', label: 'Terms' },
+  { to: '/privacy', label: 'Privacy' },
+  { to: '/security', label: 'Security' },
+  { to: '/team', label: 'Team' },
   { to: '/whitepaper', label: 'Whitepaper' },
 ]
 
