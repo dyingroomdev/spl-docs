@@ -5,212 +5,252 @@ export type WhitepaperSection = {
   highlights: string[]
 }
 
+export type TokenMetric = {
+  label: string
+  value: string
+}
+
+export type TokenDistribution = {
+  category: string
+  allocation: string
+  percent: number
+  vesting: string
+}
+
+export const WHITEPAPER_META = {
+  project: 'SPL Shield + TDL',
+  version: '2.0',
+  year: 2025,
+  title: 'SPL Shield — The AI-Secured Future of Solana',
+  description:
+    'Reference outline for the SPL Shield v2 whitepaper, capturing AI-driven security, token utility, governance, and roadmap updates for 2025.',
+}
+
 export const WHITEPAPER_SECTIONS: WhitepaperSection[] = [
   {
     id: 'executive-summary',
     title: 'Executive Summary',
     summary:
-      'Positions SPL Shield as Solana’s security and analytics layer, pairing the platform with the TDL utility token to form a trust backbone for DeFi.',
+      'SPL Shield v2 is an AI-powered security and analytics layer for Solana that protects investors, developers, and institutions from scams and exploits using the $TDL utility and governance token.',
     highlights: [
-      'Protects investors, developers, and communities from scams, rug pulls, and malicious contracts.',
-      'TDL powers governance, staking, rewards, and premium feature access across the ecosystem.',
-      'Focuses on delivering a comprehensive security posture for Solana-based projects.',
+      'Version 2.0 consolidates AI risk intelligence, analytics, and governance into a unified security layer.',
+      '$TDL powers all premium features, governance, staking, and access controls.',
+      'Built to safeguard every participant in the Solana ecosystem from real-time threats.',
     ],
   },
   {
     id: 'introduction',
     title: 'Introduction',
     summary:
-      'Explains Solana’s rapid growth and the parallel rise of security threats in low-cost, high-throughput environments.',
+      'Solana has surpassed $10B total value locked and now faces sophisticated threats from malicious contracts, MEV exploits, and unverified projects. SPL Shield responds with an AI Risk Intelligence Network for real-time protection.',
     highlights: [
-      'Fast adoption has attracted both legitimate builders and malicious actors.',
-      'Fragmented tooling leaves communities exposed to real-time threats.',
-      'SPL Shield exists to restore trust and credibility for Solana projects.',
+      'Addresses rapid Solana growth while mitigating the parallel rise in exploit attempts.',
+      'AI-driven monitoring covers malicious contracts, MEV activity, and social vectors.',
+      'Purpose-built to give institutions and communities continuous security telemetry.',
     ],
   },
   {
     id: 'problem',
     title: 'The Problem',
     summary:
-      'Details the risk landscape facing Solana users, including fraudulent launches, opaque analytics, and weak investor protections.',
+      'Market participants face escalating risk from unaudited contracts, fragmented tooling, opaque teams, and AI-generated scams that overwhelm existing defenses.',
     highlights: [
-      'Tokens can be launched within minutes, enabling malicious intent and rug pulls.',
-      'Existing analysis tools are either too technical or lack live monitoring.',
-      'Communities lack a unified shield against scams and exploit attempts.',
+      'Rug pulls and liquidity manipulation by unaudited projects.',
+      'Fragmented tools lacking behavioral analytics.',
+      'Opaque governance and unverifiable team trust.',
+      'AI-generated scams increasing complexity.',
     ],
   },
   {
     id: 'solution',
     title: 'The SPL Shield Solution',
     summary:
-      'Breaks the platform into risk scanning, analytics, and community protection tooling to cover the full threat lifecycle.',
+      'SPL Shield delivers a multilayer solution with an AI risk engine, deep DeFi analytics, community defense tooling, and cross-chain intelligence to neutralize emerging threats.',
     highlights: [
-      'Risk Scanner flags suspicious wallets, tokens, and contracts in real time.',
-      'Analytics Dashboard visualizes token distribution, liquidity health, and risk history.',
-      'Community tools include Telegram alerts, bounty programs, and developer verification.',
+      'AI-Powered Risk Engine: Detects MEV, flash-loan, and honeypot threats within 2 seconds.',
+      'DeFi Analytics Core: Provides liquidity maps and token health scoring.',
+      'Community Protection Suite: Bounties, Telegram/Discord alerts, and verified badges.',
+      'Cross-Chain Intelligence Node: Extends coverage to EVM, Sui, and Aptos networks.',
     ],
   },
   {
     id: 'core-technical-methodology',
     title: 'Core Technical Methodology',
     summary:
-      'Describes the risk scoring model, data ingestion, and sub-2-second detection latency that power the real-time scanner.',
+      'ShieldScore v2 weights smart contract integrity, liquidity, sentiment, and AI heuristics while operating with sub-two-second detection latency on a modern microservice stack.',
     highlights: [
-      'Streams on-chain liquidity events, mint authority changes, and wallet clusters.',
-      'Risk weighting: 40% liquidity health, 40% contract vulnerability, 20% trading anomalies.',
-      'Critical threats are flagged in under four Solana blocks on average.',
+      'Smart Contract Health: 35% of the ShieldScore v2 weighting.',
+      'Liquidity & Holder Integrity: 35% weighting with automated anomaly detection.',
+      'Community Sentiment & AI Threat Heuristics: 30% combined weighting.',
+      'Average Detection Latency: 1.8 seconds across monitored assets.',
+      'Architecture: Rust Anchor programs, Python microservices, PostgreSQL, Redis, WebSocket APIs.',
     ],
   },
   {
     id: 'tdl-token-utility',
     title: 'TDL Token Utility',
     summary:
-      'Outlines how TDL fuels the ecosystem by incentivizing secure participation and powering premium access.',
+      '$TDL is the fuel for SPL Shield, unlocking governance, staking, incentive rewards, payments, and AI access credits across the platform.',
     highlights: [
-      'Governance: token holders vote on upgrades and policy changes.',
-      'Staking unlocks advanced analytics and strengthens network incentives.',
-      'Rewards and ecosystem services cover scam reporting, audits, and verifications.',
+      'Governance voting on protocol upgrades and security policies.',
+      'Staking for advanced analytics access and revenue sharing.',
+      'Rewards that incentivize community reporting and audit participation.',
+      'Payments and AI access credits for enterprise integrations.',
     ],
   },
   {
     id: 'tokenomics-distribution',
     title: 'Tokenomics & Distribution',
     summary:
-      'Provides allocation percentages, vesting timelines, and presale parameters for the 1B TDL supply.',
+      'SPL Shield v2 introduces a 10B $TDL supply with a $0.002 presale price, $0.004 listing target, and balanced allocations that lock liquidity while funding growth.',
     highlights: [
-      '1,000,000,000 TDL total supply with a 25% public presale.',
-      'Presale priced at $0.002 (0.00001 SOL) targeting $400K–$500K raise.',
-      'Linear vesting schedules align incentives across community, team, and partners.',
+      'Total Supply: 10,000,000,000 $TDL with a 12-month presale vesting schedule.',
+      'Funding Targets: $400K soft cap and $500K hard cap to underwrite roadmap delivery.',
+      'Distribution spans presale, liquidity, team, staking, marketing, and treasury cohorts.',
+      'Listing Target doubles presale entry to $0.004 with DAO-managed treasury reserves.',
     ],
   },
   {
-    id: 'platform-features',
-    title: 'Platform Features & Roadmap',
+    id: 'ai-api-expansion',
+    title: 'AI & API Expansion',
     summary:
-      'Summarizes current capabilities and the near-term buildout for SPL Shield and its ecosystem.',
+      'Enterprise APIs and developer SDKs turn SPL Shield into an embedded security oracle for DEXs, wallets, and Solana-native applications.',
     highlights: [
-      'Fraud detection, analytics dashboards, and Telegram bot alerts ship in the MVP.',
-      'Future features include confidential transfers and an enterprise-grade API.',
-      'Upcoming phases deliver staking, cross-chain support, SDKs, and DAO governance.',
+      'Enterprise API: Live JSON risk scoring for exchanges, wallets, and institutions.',
+      'Developer SDK: Toolkits for React, Python, and Solana integrations.',
+      'Allows partners to surface ShieldScore analytics within their user experience.',
     ],
   },
   {
-    id: 'market-opportunity',
-    title: 'Market Opportunity',
+    id: 'governance-dao',
+    title: 'Governance & DAO 2.0',
     summary:
-      'Quantifies the demand for Solana security, citing TVL growth and ecosystem gaps.',
+      'Governance upgrades introduce a DAO 2.0 stack with multi-sig controls, quadratic voting, and an execution pipeline tied to on-chain staking.',
     highlights: [
-      'Solana TVL exceeds $4B with continued growth expectations.',
-      'DeFi rug pulls cost billions annually across chains, underscoring risk.',
-      'Target users include investors, launchpads, exchanges, and project teams.',
+      'Multi-Sig Treasury oversight with community-elected signers.',
+      'Quadratic voting to balance whales and long-tail token holders.',
+      'Stake-Vote-Execute workflow linking $TDL staking to proposal enactment.',
+      'DAO dashboard for live governance, treasury analytics, and compliance tracking.',
     ],
   },
   {
     id: 'security-compliance',
     title: 'Security & Compliance',
     summary:
-      'Affirms the governance standards, audits, and anti-rug protocols that safeguard the platform.',
+      'End-to-end safeguards span smart contract audits, adversarial AI red teaming, and regulatory alignment without sacrificing decentralization.',
     highlights: [
-      'Mandatory external smart contract audits before major releases.',
-      'Internal security reviews and regulatory alignment for token sales.',
-      'Future DEX partnerships will embed risk scoring directly into trading venues.',
+      'Mandatory pre-launch smart contract audits and immutable deployment practices.',
+      'AI red teaming to harden detection models against adversarial exploits.',
+      'KYC-optional participation model respecting jurisdictional requirements.',
+      'GDPR-compliant data design for institutional partners.',
     ],
   },
   {
-    id: 'team-governance',
-    title: 'Team & Governance',
+    id: 'market-opportunity',
+    title: 'Market Opportunity',
     summary:
-      'Explains the pseudonymous team structure, multi-sig treasury, and DAO-aligned governance.',
+      'SPL Shield positions itself as the Security Oracle of Solana, targeting a market grappling with $2.5B in annual losses amid 150% year-over-year growth.',
     highlights: [
-      'Core contributors span Solana development, smart contract security, and growth.',
-      'Treasury controlled by a multi-sig with an external doxxed advisor.',
-      'TDL staking confers voting rights for DAO-style decision making.',
+      'Solana ecosystem growth exceeding +150% YoY in TVL and activity.',
+      'Annual exploit losses estimated at $2.5B across chains.',
+      'Security oracle positioning to become default infrastructure for builders.',
+    ],
+  },
+  {
+    id: 'roadmap',
+    title: 'Roadmap',
+    summary:
+      'A 2025-focused roadmap accelerates ShieldScore v2, enterprise integrations, DAO tooling, and cross-chain threat intelligence ahead of autonomous AI scoring.',
+    highlights: [
+      'Q1 2025: Risk Engine v2 launch and $TDL presale.',
+      'Q2 2025: Enterprise API alpha and partner onboarding.',
+      'Q3 2025: DAO and staking dashboard release.',
+      'Q4 2025: Cross-chain threat network expansion.',
+      '2026+: Fully autonomous AI scoring and continuous model retraining.',
+    ],
+  },
+  {
+    id: 'team-advisory',
+    title: 'Team & Advisory Board',
+    summary:
+      'The SPL Shield leadership stack spans protocol engineering, security research, operations, growth, and advisory talent to drive institutional adoption.',
+    highlights: [
+      'Founder/CEO guiding security vision and strategic partnerships.',
+      'CTO overseeing protocol engineering and AI architecture.',
+      'COO and CMO coordinating operations, go-to-market, and community growth.',
+      'External advisors providing regulatory, exchange, and cyber defense expertise.',
     ],
   },
   {
     id: 'legal-disclaimer',
     title: 'Legal Disclaimer',
     summary:
-      'Clarifies that TDL is a utility token for ecosystem access and not an investment security.',
+      '$TDL is a utility token that grants access to platform services; it is not issued or promoted as a security.',
     highlights: [
-      'Whitepaper is informational and subject to change.',
-      'No solicitation to buy or sell securities in any jurisdiction.',
-      'Purchasers should evaluate the token based on utility access, not profit expectation.',
+      'Participation is contingent on local regulatory compliance.',
+      'Whitepaper content remains subject to updates as the protocol evolves.',
+      'No guarantees of financial returns are made or implied.',
     ],
   },
   {
     id: 'conclusion',
     title: 'Conclusion',
     summary:
-      'Reinforces the goal to make Solana the safest chain by pairing real-time monitoring with sustainable tokenomics.',
+      'SPL Shield v2 redefines Solana security through AI intelligence and community-driven governance, with $TDL as the catalyst for expansion.',
     highlights: [
-      'Presale funds accelerate MVP delivery and global go-to-market.',
-      'TDL connects community incentives with platform growth.',
-      'Vision is to become the default security layer for Solana DeFi and NFTs.',
+      'Combines real-time threat detection with transparent tokenomics.',
+      '$TDL aligns incentives between contributors, investors, and partners.',
+      'Objective: become the default security backbone for the Solana ecosystem.',
     ],
   },
 ]
 
-export const TOKEN_METRICS: { label: string; value: string }[] = [
-  { label: 'Total Supply', value: '1,000,000,000 TDL' },
-  { label: 'Presale Allocation', value: '250,000,000 TDL (25%)' },
-  { label: 'Token Standard', value: 'Solana SPL (Token-2022 with extensions)' },
-  { label: 'Reference SOL Price', value: '$200 (pricing basis)' },
-  { label: 'Presale Price', value: '$0.002 per TDL = 0.00001 SOL' },
+export const TOKEN_METRICS: TokenMetric[] = [
+  { label: 'Whitepaper Version', value: '2.0 (2025)' },
+  { label: 'Total Supply', value: '10,000,000,000 TDL' },
+  { label: 'Presale Price', value: '$0.002 per TDL' },
+  { label: 'Listing Target', value: '$0.004 per TDL' },
   { label: 'Soft Cap', value: '$400,000' },
-  { label: 'Hard Cap', value: '$500,000 (SOL/USDC)' },
-  { label: 'Full Presale Proceeds', value: '$500,000 at full subscription' },
-  {
-    label: 'Presale Unlock Schedule',
-    value: '12-month linear unlock with no cliff starting at DEX listing',
-  },
-  {
-    label: 'Presale Pricing Mechanics',
-    value: 'Fixed-price sale; SOL contributions adjust to maintain the USD peg',
-  },
+  { label: 'Hard Cap', value: '$500,000' },
+  { label: 'ShieldScore v2 Latency', value: '1.8 seconds average detection' },
+  { label: 'AI Access Credits', value: '$TDL required for enterprise API usage' },
 ]
 
-export const TOKEN_DISTRIBUTION: {
-  category: string
-  allocation: string
-  percent: number
-  vesting: string
-}[] = [
+export const TOKEN_DISTRIBUTION: TokenDistribution[] = [
   {
-    category: 'Presale (Public Sale)',
+    category: 'Presale',
     allocation: '25%',
     percent: 25,
-    vesting: '12-month linear unlock, no cliff, starting at DEX listing.',
+    vesting: '12-month linear unlock.',
   },
   {
-    category: 'Liquidity & CEX Listings',
+    category: 'Liquidity + CEX',
     allocation: '20%',
     percent: 20,
-    vesting:
-      'Locked liquidity at launch; vesting aligns with exchange partnerships and depth targets.',
+    vesting: '12-month lock aligned with exchange depth targets.',
   },
   {
     category: 'Team & Development',
     allocation: '20%',
     percent: 20,
-    vesting: '24-month linear vesting period.',
+    vesting: '12-month vesting with performance milestones.',
   },
   {
-    category: 'Staking & Rewards',
+    category: 'Staking + Rewards',
     allocation: '15%',
     percent: 15,
-    vesting: 'Distributed over 48 months to incentivize long-term staking and participation.',
+    vesting: '48-month linear distribution for long-term incentives.',
   },
   {
-    category: 'Marketing & Partnerships',
+    category: 'Marketing + Partnerships',
     allocation: '10%',
     percent: 10,
-    vesting: 'Released according to strategic milestones and promotional partnerships.',
+    vesting: '12-month lock with milestone-based releases.',
   },
   {
-    category: 'Treasury & Ecosystem Growth',
+    category: 'Treasury + Ecosystem Growth',
     allocation: '10%',
     percent: 10,
-    vesting: 'Reserved for ecosystem expansion, grants, and long-term sustainability.',
+    vesting: 'DAO-managed reserve for grants and expansion.',
   },
 ]
