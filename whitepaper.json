@@ -1,0 +1,202 @@
+# SPL Shield V2 — The AI-Secured Future of Solana
+**Version 2.0 | 2025**
+
+---
+
+## 1. Executive Summary
+SPL Shield is the first **AI-powered security and analytics layer** for the Solana blockchain, protecting investors, developers, and institutions against fraudulent contracts, rug pulls, and emerging DeFi exploits.
+
+At its core lies **$TDL (Dollar Token)** — a governance and utility asset that powers access, staking, rewards, and ecosystem decision-making.  
+Together, SPL Shield + TDL form a **trust infrastructure** designed to make Solana the most secure, data-driven environment in decentralized finance.
+
+---
+
+## 2. Introduction
+Solana’s ecosystem has surpassed billions in TVL, but critical risks remain:
+- Malicious contracts and flash-rug patterns  
+- MEV exploiters draining pools  
+- Lack of verifiable credibility scoring for new projects  
+
+SPL Shield introduces an **AI Risk Intelligence Network**, combining machine learning, real-time monitoring, and decentralized governance to solve these challenges.
+
+---
+
+## 3. The Problem
+- **Rug Pulls & Liquidity Manipulation:** Thousands of tokens launch weekly without audits or liquidity lock requirements.  
+- **Fragmented Analytics:** Tools give isolated snapshots instead of actionable insights.  
+- **Opaque Governance:** Communities lack tools to assess developer credibility.  
+- **AI-Based Scams:** Attackers now use AI-generated smart contracts to bypass legacy detection systems.  
+
+A scalable DeFi environment needs a **machine-verified trust layer**.
+
+---
+
+## 4. The SPL Shield Solution
+### Four-Layer Security Fabric
+1. **AI-Powered Risk Engine** — Detects MEV, wash trading, honeypots, and anomaly clusters in under 2 seconds.  
+2. **DeFi Analytics Core** — Liquidity heatmaps, holder integrity scoring, and token behavior visualization.  
+3. **Community Protection Suite** — Automated alerts, verification badges, and bounty systems.  
+4. **Cross-Chain Intelligence Network (2026+)** — Expanding ShieldScore to EVM, Sui, Aptos, and emerging L2s.
+
+---
+
+## 5. Core Technical Methodology
+### ShieldScore V2 — Hybrid Risk Scoring
+| Parameter | Weight | Description |
+|----------|--------|-------------|
+| Smart Contract Health | 35% | Detects vulnerabilities, mint authority risks |
+| Liquidity & Holder Integrity | 35% | Analyzes lock ratios, burns, and wallet behavior |
+| Community Sentiment | 15% | Developer activity + social engagement metrics |
+| AI Threat Heuristics | 15% | Identifies predictive indicators of scams |
+
+**Latency:** ~1.8 seconds  
+**Architecture:** Rust + Python microservices + PostgreSQL + Redis + WebSocket API  
+
+---
+
+## 6. $TDL Token Utility
+- **Governance:** DAO voting on upgrades and model tuning  
+- **Staking:** Access premium analytics and high-frequency API endpoints  
+- **Rewards:** Scam reporting, bounty programs, vulnerability disclosures  
+- **Payments:** Audits, verifications, developer KYC  
+- **AI Credits:** For enterprise-grade ShieldScore API usage  
+
+---
+
+## 7. Tokenomics Distribution
+**Total Supply:** 10,000,000,000 TDL  
+
+| Category | Allocation | Vesting | Purpose |
+|----------|------------|---------|----------|
+| Presale | 25% | 12mo linear | Community allocation |
+| Liquidity + CEX | 20% | 12mo lock | Market depth & stability |
+| Team & Development | 20% | 12mo vesting | Long-term sustainability |
+| Staking + Rewards | 15% | 48mo linear | Incentive economy |
+| Marketing + Partnerships | 10% | 12mo lock | Brand expansion |
+| Treasury + Ecosystem | 10% | DAO-managed | Protocol evolution |
+
+**Presale Price:** $0.002  
+**Listing Target:** $0.004  
+**Soft/Hard Cap:** $400k–$500k  
+
+---
+
+## 8. AI & API Expansion
+### Enterprise API
+- Risk feed for DEXs, wallets, launchpads  
+- JSON endpoints for ShieldScore  
+- Tiered TDL-powered API access  
+
+### Developer SDK
+- React, Python, and Solana integration kits  
+- Extendable modules for custom dashboards  
+
+---
+
+## 9. Governance & DAO 2.0
+- **Multi-Sig Treasury** with external auditors  
+- **Quadratic Voting** to prevent whale manipulation  
+- **Proposal Pipeline:** stake → discuss → vote → execute  
+- **DAO Dashboard:** full transparency for budget flow and model updates  
+
+---
+
+## 10. Security & Compliance
+- Mandatory audits  
+- Continuous AI-driven penetration testing  
+- KYC-optional contributions  
+- Immutable contract principles  
+- GDPR-aligned off-chain architecture  
+
+---
+
+## 11. Market Opportunity
+- Solana’s projected 150% YoY DeFi growth  
+- $2.5B+ annual losses from DeFi scams  
+- Positioning: **Security Oracle for Solana and Web3**  
+
+---
+
+## 12. Roadmap
+| Quarter | Milestone |
+|---------|-----------|
+| Q1 2025 | Risk Engine V2 + Presale Launch |
+| Q2 2025 | Enterprise API Alpha |
+| Q3 2025 | Staking + DAO Governance |
+| Q4 2025 | Cross-Chain Threat Network |
+| 2026+ | Autonomous AI Model Upgrades |
+
+---
+
+## 13. Future Strategic Development (2026 and Beyond)
+
+SPL Shield is on a long-term trajectory to evolve into a **global AI-powered security infrastructure for Web3**.  
+This transformation is driven by three flagship initiatives:
+
+---
+
+### **13.1 Expansion of SPL Shield LLM Intelligence Layer**
+
+#### Key Deliverables
+- **Multi-Model Intelligence Engine** for contextual risk evaluation of tokens, wallets, presales, contracts, and markets  
+- **Developer Tools:** enterprise SDKs, APIs, compliance integrations  
+- **Predictive Analytics Layer** using machine learning + behavioral modeling  
+- **Institutional Dashboard:** portfolio risk scoring + automated reporting  
+
+**Strategic Objective:**  
+Position SPL Shield as the **primary intelligence layer** for secure engagement across Solana and Web3.
+
+---
+
+### **13.2 Development of SPL Shield’s Native Security-Focused Blockchain**
+
+A standalone chain engineered with security-first principles.
+
+#### Core Principles
+- **Security-Native Protocol:** On-chain risk scoring, wallet reputation, transaction threat flags  
+- **Modular Architecture:** Interoperable with Solana, EVM, and cross-chain layers  
+- **High Observability:** Real-time analytics for AMMs, presales, bridges, and launchpads  
+- **Compliance-Ready:** Built-in AML indicators + anomaly tracking  
+
+**Strategic Objective:**  
+Establish SPL Shield as a **foundational settlement layer** for secure Web3 infrastructure.
+
+---
+
+### **13.3 Transition to Public Limited Company (PLC) — London, UK**
+
+Planned for **January 2026**.
+
+#### Strategic Benefits
+- Strong global regulatory posture  
+- Institutional credibility  
+- Investor-grade governance  
+- Access to European and global fintech markets  
+
+**Strategic Objective:**  
+Build a globally recognized, institution-grade security brand.
+
+---
+
+### **13.4 Long-Term Vision**
+SPL Shield will evolve into:
+- A unified AI risk infrastructure across major chains  
+- A security-centric blockchain ecosystem for retail & institutional markets  
+- A globally regulated, enterprise-grade technology company  
+
+---
+
+## 14. Team & Advisory Board
+Founder/CEO, CTO, COO, CMO, and advisory panel of auditors, risk engineers, and partner launchpad executives.
+
+---
+
+## 15. Legal Disclaimer
+TDL is a utility token, not a security. Regulatory compliance varies by jurisdiction.  
+SPL Shield may modify mechanisms as needed for global regulatory alignment.
+
+---
+
+## 16. Conclusion
+SPL Shield V2 defines the future of AI-secured finance on Solana.  
+With $TDL powering governance, AI access, and user incentives, the SPL Shield ecosystem is positioned to become the **global standard for decentralized risk intelligence**.

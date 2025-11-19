@@ -19,7 +19,7 @@ const Team = () => {
             Oversees all smart contract, API, and infrastructure development.
           </p>
           <p>
-            <strong>Contact:</strong> <a className="page__inline-link" href="https://t.me/aragornspl">@aragornspl</a> on Telegram
+            <strong>Contact:</strong> <a className="page__inline-link" href="https://t.me/aragornoffocial">@aragornoffocial</a> on Telegram
           </p>
         </article>
 
